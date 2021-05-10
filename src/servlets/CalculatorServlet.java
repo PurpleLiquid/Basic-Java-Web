@@ -7,17 +7,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/home", name = "HomeServlet")
-public class HomeServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/calculator", name = "CalculatorServlet")
+public class CalculatorServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
-    public HomeServlet() {
+    
+    public CalculatorServlet() {
         super();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		request.getRequestDispatcher("index.jsp").forward(request, response);
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
