@@ -9,7 +9,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
-@WebFilter(urlPatterns = "/home")
+@WebFilter(urlPatterns = "/")
 public class HomeFilter implements Filter {
 
     public HomeFilter() {
@@ -19,11 +19,8 @@ public class HomeFilter implements Filter {
 	}
 	
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		// TODO Auto-generated method stub
-		// place your code here
-
-		// pass the request along the filter chain
-		chain.doFilter(request, response);
+		request.getRequestDispatcher("/home").forward(request, response);
+		// chain.doFilter(request, response);
 	}
 
 	public void init(FilterConfig fConfig) throws ServletException {
