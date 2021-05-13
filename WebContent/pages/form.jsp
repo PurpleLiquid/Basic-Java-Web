@@ -1,5 +1,6 @@
 <%@ include file="/includes/header.jsp" %>
 <title>Form</title>
+<link href="/BasicJavaWeb/css/form.css" rel="stylesheet">
 </head>
 
 <body class="text-center">
@@ -9,7 +10,7 @@
 <h1 class="h3 mb-3 fw-normal">Type Something Here</h1>
 
 <div class="form-floating mb-3">
-	<input type="text" class="form-control" id="floatingInput" placeholder="type something here...">
+	<input type="text" class="form-control" id="floatingInput" placeholder="Text">
 	<label for="floatingInput">Text</label>
 </div>
 
