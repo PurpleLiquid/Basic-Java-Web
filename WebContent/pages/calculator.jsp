@@ -12,7 +12,25 @@
 			<h1>${calcResult}</h1>
 		</div>
 	</div>
+	
 	<div class="container py-4">
+		<!-- operations -->
+		<div class="row mb-3">
+		    <div class="col center-button">
+		    	<button class="btn btn-info btn-lg button" type="button" value="+">+</button>
+		    </div>
+		    <div class="col center-button">
+		    	<button class="btn btn-info btn-lg button" type="button" value="-">-</button>
+		    </div>
+		    <div class="col center-button">
+		    	<button class="btn btn-info btn-lg button" type="button" value="*">*</button>
+		    </div>
+		    <div class="col center-button">
+		    	<button class="btn btn-info btn-lg button" type="button" value="/">/</button>
+		    </div>
+	    </div>
+	    
+	    <!-- 1, 2, 3 -->
 		<div class="row mb-3">
 		    <div class="col-4 center-button">
 		    	<button class="btn btn-secondary btn-lg button" type="button" value="1">1</button>
@@ -25,6 +43,7 @@
 		    </div>
 	    </div>
 	    
+	    <!-- 4, 5, 6 -->
 	    <div class="row mb-3">
 		    <div class="col-4 center-button">
 		    	<button class="btn btn-secondary btn-lg button" type="button" value="4">4</button>
@@ -37,6 +56,7 @@
 		    </div>
 	    </div>
 	    
+	    <!-- 7, 8, 9 -->
 	    <div class="row mb-3">
 		    <div class="col-4 center-button">
 		    	<button class="btn btn-secondary btn-lg button" type="button" value="7">7</button>
@@ -49,6 +69,7 @@
 		    </div>
 	    </div>
 	    
+	    <!-- 0 -->
 	    <div class="row mb-3">
 	    	<div class="col-4">
 		    </div>
@@ -59,6 +80,7 @@
 		    </div>
 	    </div>
 	    
+	    <!-- Calculate/Equals/Submit -->
 	    <div class="row mb-3">
     		<button class="w-100 btn btn-lg btn-primary" type="submit">Calculate</button>
 	    </div>
