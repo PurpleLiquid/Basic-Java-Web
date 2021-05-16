@@ -6,13 +6,13 @@
 <body>
 <%@ include file="/includes/navbar.jsp" %>
 
-<main>
-	<div class="container py-4">
-		<div class="h-100 p-5 bg-light border rounded-3">
-			<h1>${calcResult}</h1>
-		</div>
+<div class="container py-4">
+	<div class="h-100 p-5 bg-light border rounded-3">
+		<h1>${calcResult}</h1>
 	</div>
-	
+</div>
+
+<main>
 	<div class="container py-4">
 		<!-- operations -->
 		<div class="row mb-3">
