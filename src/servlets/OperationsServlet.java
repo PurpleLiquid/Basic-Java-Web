@@ -7,21 +7,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/calculator", name = "CalculatorServlet")
-public class CalculatorServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/calculator/operations", name = "OperationsServlet")
+public class OperationsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
-    public CalculatorServlet() {
+    public OperationsServlet() {
         super();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("pages/calculator.jsp").forward(request, response);
+		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		
 		doGet(request, response);
 	}
 

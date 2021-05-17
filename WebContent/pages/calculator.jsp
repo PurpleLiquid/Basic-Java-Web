@@ -14,58 +14,60 @@
 
 <main>
 	<div class="container py-4">
+	<form action="calculator/operations" method="post">
 		<!-- operations -->
 		<div class="row mb-3">
 		    <div class="col center-button">
-		    	<button class="btn btn-info btn-lg button" type="button" value="+">+</button>
+		    	<button class="btn btn-info btn-lg button" type="button" name="op" value="+">+</button>
 		    </div>
 		    <div class="col center-button">
-		    	<button class="btn btn-info btn-lg button" type="button" value="-">-</button>
+		    	<button class="btn btn-info btn-lg button" type="button" name="op" value="-">-</button>
 		    </div>
 		    <div class="col center-button">
-		    	<button class="btn btn-info btn-lg button" type="button" value="*">*</button>
+		    	<button class="btn btn-info btn-lg button" type="button" name="op" value="*">*</button>
 		    </div>
 		    <div class="col center-button">
-		    	<button class="btn btn-info btn-lg button" type="button" value="/">/</button>
+		    	<button class="btn btn-info btn-lg button" type="button" name="op" value="/">/</button>
 		    </div>
 	    </div>
-	    
+	</form>
+	<form action="calculator/numbers" method="post">
 	    <!-- 1, 2, 3 -->
 		<div class="row mb-3">
 		    <div class="col-4 center-button">
-		    	<button class="btn btn-secondary btn-lg button" type="button" value="1">1</button>
+		    	<button class="btn btn-secondary btn-lg button" type="button" name="val" value="1">1</button>
 		    </div>
 		    <div class="col-4 center-button">
-		    	<button class="btn btn-secondary btn-lg button" type="button" value="2">2</button>
+		    	<button class="btn btn-secondary btn-lg button" type="button" name="val" value="2">2</button>
 		    </div>
 		    <div class="col-4 center-button">
-		    	<button class="btn btn-secondary btn-lg button" type="button" value="3">3</button>
+		    	<button class="btn btn-secondary btn-lg button" type="button" name="val" value="3">3</button>
 		    </div>
 	    </div>
 	    
 	    <!-- 4, 5, 6 -->
 	    <div class="row mb-3">
 		    <div class="col-4 center-button">
-		    	<button class="btn btn-secondary btn-lg button" type="button" value="4">4</button>
+		    	<button class="btn btn-secondary btn-lg button" type="button" name="val" value="4">4</button>
 		    </div>
 		    <div class="col-4 center-button">
-		    	<button class="btn btn-secondary btn-lg button" type="button" value="5">5</button>
+		    	<button class="btn btn-secondary btn-lg button" type="button" name="val" value="5">5</button>
 		    </div>
 		    <div class="col-4 center-button">
-		    	<button class="btn btn-secondary btn-lg button" type="button" value="6">6</button>
+		    	<button class="btn btn-secondary btn-lg button" type="button" name="val" value="6">6</button>
 		    </div>
 	    </div>
 	    
 	    <!-- 7, 8, 9 -->
 	    <div class="row mb-3">
 		    <div class="col-4 center-button">
-		    	<button class="btn btn-secondary btn-lg button" type="button" value="7">7</button>
+		    	<button class="btn btn-secondary btn-lg button" type="button" name="val" value="7">7</button>
 		    </div>
 		    <div class="col-4 center-button">
-		    	<button class="btn btn-secondary btn-lg button" type="button" value="8">8</button>
+		    	<button class="btn btn-secondary btn-lg button" type="button" name="val" value="8">8</button>
 		    </div>
 		    <div class="col-4 center-button">
-		    	<button class="btn btn-secondary btn-lg button" type="button" value="9">9</button>
+		    	<button class="btn btn-secondary btn-lg button" type="button" name="val" value="9">9</button>
 		    </div>
 	    </div>
 	    
@@ -74,16 +76,18 @@
 	    	<div class="col-4">
 		    </div>
 	    	<div class="col-4 center-button">
-	    		<button class="btn btn-secondary btn-lg button" type="button" value="0">0</button>
+	    		<button class="btn btn-secondary btn-lg button" type="button" name="val" value="0">0</button>
 	    	</div>
 	    	<div class="col-4">
 		    </div>
 	    </div>
-	    
+	</form>
+	<form action="calculator" method="post">
 	    <!-- Calculate/Equals/Submit -->
 	    <div class="row mb-3">
     		<button class="w-100 btn btn-lg btn-primary" type="submit">Calculate</button>
 	    </div>
+	</form>
 	</div>
 </main>
 
