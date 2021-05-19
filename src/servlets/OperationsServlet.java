@@ -7,7 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/calculator/operations", name = "OperationsServlet")
+import util.ConstAttributes;
+
+@WebServlet(name = "OperationsServlet")
 public class OperationsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
@@ -15,12 +17,12 @@ public class OperationsServlet extends HttpServlet {
         super();
     }
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-	}
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
+		String op = request.getParameter("op");
+		char operation = op.charAt(0);
+		
+		request.getSession().setAttribute(ConstAttributes.CALC_OPERATION, operation);
+		request.setAttribute(ConstAttributes.CALC_RESULT, operation);
+		request.getRequestDispatcher("pages/calculator.jsp").forward(request, response);
 	}
-
 }

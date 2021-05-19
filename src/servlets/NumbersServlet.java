@@ -7,20 +7,32 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/calculator/numbers", name = "NumbersServlet")
+import util.ConstAttributes;
+
+@WebServlet(name = "NumbersServlet")
 public class NumbersServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
     public NumbersServlet() {
         super();
     }
-    
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
+		String val = request.getParameter("val");
+		int number = Integer.parseInt(val);
+		
+		int firstNum = (int) request.getSession().getAttribute(ConstAttributes.CALC_FIRST_NUM);
+		String num = "" + firstNum;
+		if (firstNum == 0) {
+			request.setAttribute(ConstAttributes.CALC_RESULT, number);
+			request.getSession().setAttribute(ConstAttributes.CALC_FIRST_NUM, number);
+		} else {
+			num += number;
+			request.setAttribute(ConstAttributes.CALC_RESULT, num);
+			request.getSession().setAttribute(ConstAttributes.CALC_SECOND_NUM, Integer.parseInt(num));
+		}
+		
+		request.getRequestDispatcher("pages/calculator.jsp").forward(request, response);
 	}
 
 }
